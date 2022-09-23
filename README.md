@@ -1,11 +1,11 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="">
+    <img alt="Gatsby" src="[https://www.gatsbyjs.com/Gatsby-Monogram.svg](http://www.dolcesalato.com.au/wp-content/uploads/2019/11/ds-logo.png)" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby WordPress blog starter
+  Dolce Salato GatsbyJS site
 </h1>
 
 Kick off your wordpress gatsby project with this blog boilerplate. This starter ships with the main Gatsby Wordpress configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
