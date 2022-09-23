@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="">
-    <img alt="Gatsby" src="http://www.dolcesalato.com.au/wp-content/uploads/2019/11/ds-logo.png" width="60" />
+    <img alt="Gatsby" src="http://www.dolcesalato.com.au/wp-content/uploads/2019/11/ds-logo.png" width="150" />
   </a>
 </p>
 <h1 align="center">
