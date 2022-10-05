@@ -1,48 +1,32 @@
+
+
+
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import parse from "html-react-parser"
+import Helmet from 'react-helmet'
+import "../css/style.css"
+import "../css/responsive.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from "../components/Common/Header"
+import Footer from "../components/Common/Footer"
+import Review from "../components/Common/Review"
 
-const Layout = ({ isHomePage, children }) => {
-  const {
-    wp: {
-      generalSettings: { title },
-    },
-  } = useStaticQuery(graphql`
-    query LayoutQuery {
-      wp {
-        generalSettings {
-          title
-          description
-        }
-      }
-    }
-  `)
-
-  return (
-    <div className="global-wrapper" data-is-root-path={isHomePage}>
-      <header className="global-header">
-        {isHomePage ? (
-          <h1 className="main-heading">
-            <Link to="/">{parse(title)}</Link>
-          </h1>
-        ) : (
-          <Link className="header-link-home" to="/">
-            {title}
-          </Link>
-        )}
-      </header>
-
-      <main>{children}</main>
-
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-        {` `}
-        And <a href="https://wordpress.org/">WordPress</a>
-      </footer>
-    </div>
-  )
-}
+const Layout = ({ children }) => (
+  <>
+  <Helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  </Helmet>
+    <Header />
+    {children}
+     <Review />
+     <Footer />
+  </>
+  
+)
 
 export default Layout
+
+
+
+
+
+
