@@ -1,0 +1,67 @@
+query SINGLE_CONTENT_QUERY($id: ID!) {
+  ourReviews(id: $id) {
+    content
+
+    contentType {
+      node {
+        id
+      }
+    }
+
+    contentTypeName
+    databaseId
+    date
+    dateGmt
+    desiredSlug
+    enclosure
+
+    featuredImage {
+      node {
+        __typename
+        id
+      }
+    }
+
+    featuredImageDatabaseId
+    featuredImageId
+    guid
+    id
+    isContentNode
+    isTermNode
+
+    lastEditedBy {
+      node {
+        id
+      }
+    }
+
+    link
+    modified
+    modifiedGmt
+
+    reviewInfo {
+      fieldGroupName
+
+      image {
+        __typename
+        id
+      }
+
+      name
+      review
+    }
+
+    slug
+    status
+
+    template {
+      templateName
+
+      __typename
+    }
+
+    title
+    uri
+    __typename
+  }
+}

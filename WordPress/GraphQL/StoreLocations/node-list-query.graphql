@@ -1,0 +1,96 @@
+query NODE_LIST_QUERY($first: Int!, $after: String) {
+  allStoreLocations(first: $first, after: $after) {
+    nodes {
+      ancestors(first: 100) {
+        nodes {
+          id
+          __typename
+        }
+      }
+
+      wpChildren: children(first: 100) {
+        nodes {
+          id
+          __typename
+        }
+      }
+
+      content
+
+      contentType {
+        node {
+          id
+        }
+      }
+
+      contentTypeName
+      databaseId
+      date
+      dateGmt
+      desiredSlug
+      enclosure
+
+      featuredImage {
+        node {
+          __typename
+          id
+        }
+      }
+
+      featuredImageDatabaseId
+      featuredImageId
+      guid
+      id
+      isContentNode
+      isTermNode
+
+      lastEditedBy {
+        node {
+          id
+        }
+      }
+
+      link
+      modified
+      modifiedGmt
+
+      wpParent: parent {
+        node {
+          id
+          __typename
+        }
+      }
+
+      parentDatabaseId
+      parentId
+      slug
+      status
+
+      storeLocationInfo {
+        address
+        contactNumber
+        fieldGroupName
+        locationUrl
+        storeContactPerson
+        storeEmail
+        storeName
+        storePassword
+        username
+      }
+
+      template {
+        templateName
+
+        __typename
+      }
+
+      title
+      uri
+      __typename
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}

@@ -27,6 +27,11 @@ module.exports = {
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
         url: 'https://dolcesalato.steamlinedesign.com/graphql',
+		debug: {
+		  graphql: {
+			writeQueriesToDisk: true,
+		  },
+		},
       },
     },
 

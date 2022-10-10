@@ -1,0 +1,165 @@
+query PREVIEW_QUERY($id: ID!) {
+  page(id: $id, idType: ID, asPreview: true) {
+    aboutPageInfo {
+      desc
+      fieldGroupName
+
+      image {
+        __typename
+        id
+      }
+
+      pageTitle
+    }
+
+    ancestors(first: 100) {
+      nodes {
+        id
+        __typename
+      }
+    }
+
+    author {
+      node {
+        id
+      }
+    }
+
+    authorDatabaseId
+    authorId
+
+    wpChildren: children(first: 100) {
+      nodes {
+        id
+        __typename
+      }
+    }
+
+    commentCount
+    commentStatus
+
+    comments(first: 100) {
+      nodes {
+        id
+      }
+    }
+
+    content
+
+    contentType {
+      node {
+        id
+      }
+    }
+
+    contentTypeName
+    databaseId
+    date
+    dateGmt
+    desiredSlug
+    enclosure
+
+    featuredImage {
+      node {
+        __typename
+        id
+      }
+    }
+
+    featuredImageDatabaseId
+    featuredImageId
+    guid
+
+    homePageInfo {
+      enjoyYourFunction {
+        fieldGroupName
+
+        image {
+          __typename
+          id
+        }
+
+        locations
+        productsTotal
+        serviceYear
+        smallDesc
+        smallTitle
+        subDesc
+        subTitle
+        title
+      }
+
+      fieldGroupName
+
+      lookingForSomethingSpecial {
+        desc
+        fieldGroupName
+
+        image {
+          __typename
+          id
+        }
+
+        title
+      }
+
+      productCategories {
+        category
+        categoryDesc
+        fieldGroupName
+
+        image {
+          __typename
+          id
+        }
+      }
+
+      whatsNew {
+        fieldGroupName
+        subTitle
+        title
+      }
+    }
+
+    id
+    isContentNode
+    isFrontPage
+    isPostsPage
+    isPrivacyPage
+    isRevision
+    isTermNode
+
+    lastEditedBy {
+      node {
+        id
+      }
+    }
+
+    link
+    menuOrder
+    modified
+    modifiedGmt
+
+    wpParent: parent {
+      node {
+        id
+        __typename
+      }
+    }
+
+    parentDatabaseId
+    parentId
+    slug
+    status
+
+    template {
+      templateName
+
+      __typename
+    }
+
+    title
+    uri
+    __typename
+  }
+}
