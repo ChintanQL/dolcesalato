@@ -44,6 +44,32 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
       }
     }
 
+    contactUsInfo {
+      callUs
+      desc
+      email
+      fieldGroupName
+
+      image {
+        __typename
+        id
+      }
+
+      lookingForSomethingSpecial {
+        desc
+        fieldGroupName
+
+        image {
+          __typename
+          id
+        }
+
+        title
+      }
+
+      title
+    }
+
     content
 
     contentType {

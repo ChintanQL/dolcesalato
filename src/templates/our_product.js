@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Layout from "../components/layout"
-
+import LazyLoad from 'react-lazyload';
 import { Link,graphql } from 'gatsby'
 
 import cakebg from '../images/cakebg.png';
@@ -33,16 +33,18 @@ class CategoryDetails extends Component {
 					return (
 					<>
 						<div class="col-md-4">
-						  <div class="our_product">
-							 <div class="image_t">
-								<img src={prop.category_image} />
-							 </div>
-							 <div class="cont_categroy">
-								<div class="inner_cate">
-								  <h2> <Link to={"/product-category/"+prop.slug}>{prop.name} </Link> </h2>
+							<LazyLoad height={200} >
+								<div class="our_product">
+									<div class="image_t">
+										<img src={prop.category_image} />
+									</div>
+									<div class="cont_categroy">
+										<div class="inner_cate">
+											<h2> <Link to={"/product-category/"+prop.slug}>{prop.name} </Link> </h2>
+										</div>
+									</div>
 								</div>
-							 </div>
-						  </div>
+						  </LazyLoad>
 					   </div>
 					</>
 				)

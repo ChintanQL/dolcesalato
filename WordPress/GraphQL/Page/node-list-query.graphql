@@ -45,6 +45,32 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
         }
       }
 
+      contactUsInfo {
+        callUs
+        desc
+        email
+        fieldGroupName
+
+        image {
+          __typename
+          id
+        }
+
+        lookingForSomethingSpecial {
+          desc
+          fieldGroupName
+
+          image {
+            __typename
+            id
+          }
+
+          title
+        }
+
+        title
+      }
+
       content
 
       contentType {

@@ -48,9 +48,27 @@ export default function Header() {
 				data.wpMenu.menuItems.nodes.map(
                 (prop,i) => {
 					return (
-							 <li className="nav-item">
-							<Link to={prop.label.replace(/\s+/g, '-').replace("'", '').toLowerCase()} className="nav-link" activeClassName="active">{prop.label}</Link>
-							</li>
+							<>
+							{(prop.label == 'Product') ? (
+								<li className="nav-item">
+									<Link to={"/product-category"} className="nav-link" activeClassName="active">{prop.label}</Link>
+								</li>
+							) : (
+								<>
+								{(prop.label == 'Home') ? (
+									<li className="nav-item">
+										<Link to={"/"} className="nav-link" activeClassName="active">{prop.label}</Link>
+									</li>
+								) : (
+									<li className="nav-item">
+										<Link to={"/"+prop.label.replace(/\s+/g, '-').replace("'", '').toLowerCase()} className="nav-link" activeClassName="active">{prop.label}</Link>
+									</li>
+								)}
+								</>
+							)}
+							</>
+					
+							 
 						
 						
 							

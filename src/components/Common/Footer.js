@@ -76,7 +76,7 @@ export default function Footer() {
                     </div>
                     <div className="row">
                         <div className="dlt_copy text-center pt">
-                            <p>© 2022 <a href="#">Dolce &amp; Salato</a>  | <a href="#">Privacy Policy</a> </p>
+                            <p>© 2022 <Link to={"/"} >Dolce &amp; Salato</Link>  | <Link to={"/privacy-policy"}>Privacy Policy</Link> </p>
                             <span>Please note photos are for illustration purposes</span>
                         </div>
                     </div>
